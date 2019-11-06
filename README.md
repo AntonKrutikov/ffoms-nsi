@@ -10,7 +10,7 @@
         fmt.Printf("%s\t%s\t%s\t%s\n", d.Info.Code, d.UserVersion, d.LastUpdate, d.ShortName)
     }
 
-## Получить файл справлоника по его коду:
+## Получить файл справочника по его коду:
 
     dic, _ := ffoms.FindDictionary("F001")
     file, _ := dic.GetFile()
