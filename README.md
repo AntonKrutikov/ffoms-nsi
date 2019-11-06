@@ -2,9 +2,27 @@
 
     go get github.com/antonkrutikov/ffoms-nsi
 
-В комплекте есть простая консольная утилита `cmd\ffoms-nsi`,  позволяющая загрузить все справочники в виде файлов.
+## Получить список справочников:
 
-    # go run cmd/ffoms-nsi/main.go
+    list, _ := ffoms.GetDictionaryList()
+
+    for _, d := range list {
+        fmt.Printf("%s\t%s\t%s\t%s\n", d.Info.Code, d.UserVersion, d.LastUpdate, d.ShortName)
+    }
+
+## Получить файл справлчника по его коду:
+
+    dic, _ := ffoms.FindDictionary("F001")
+    file, _ := dic.GetFile()
+	
+
+## Консольная утилита
+
+В комплекте есть пример консольной утилиты, позволяющей загрузить все справочники в виде файлов.
+
+    go run github.com/antonkrutikov/ffoms-nsi/cmd/ffoms-nsi
+
+Использование:
 
     -all
         Загружает все последние версии справочников в директорию, указанную в -dir
