@@ -10,7 +10,7 @@
         fmt.Printf("%s\t%s\t%s\t%s\n", d.Info.Code, d.UserVersion, d.LastUpdate, d.ShortName)
     }
 
-## Получить файл справлчника по его коду:
+## Получить файл справлоника по его коду:
 
     dic, _ := ffoms.FindDictionary("F001")
     file, _ := dic.GetFile()
@@ -18,7 +18,7 @@
 
 ## Консольная утилита
 
-В комплекте есть пример консольной утилиты, позволяющей загрузить все справочники в виде файлов.
+В комплекте есть пример [консольной утилиты](https://github.com/AntonKrutikov/ffoms-nsi/releases/download/v1.0.0/ffoms-nsi-win64.exe), позволяющей загрузить все справочники в виде файлов.
 
     go run github.com/antonkrutikov/ffoms-nsi/cmd/ffoms-nsi
 
