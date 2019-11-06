@@ -53,6 +53,7 @@ func main() {
 		if err := saveFile(dic); err != nil {
 			log.Fatal(err)
 		}
+		return
 	}
 
 	if allFlag {
@@ -66,6 +67,7 @@ func main() {
 				log.Fatal(err)
 			}
 		}
+		return
 	}
 
 	flag.PrintDefaults()
